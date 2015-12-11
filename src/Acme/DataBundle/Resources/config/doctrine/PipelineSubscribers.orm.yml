@@ -1,0 +1,44 @@
+Acme\DataBundle\Entity\PipelineSubscribers:
+    type: entity
+    table: pipeline_subscribers
+    indexes:
+        fk_pipeline_subscribers_stores1_idx:
+            columns:
+                - stores_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        email:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        stores:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,62 @@
+Acme\DataBundle\Entity\Vehicles:
+    type: entity
+    table: vehicles
+    indexes:
+        fk_vehicles_users1_idx:
+            columns:
+                - users_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        make:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        model:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        year:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        licensePlate:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        users:
+            targetEntity: Users
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                users_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

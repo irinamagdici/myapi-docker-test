@@ -1,0 +1,39 @@
+Acme\DataBundle\Entity\PromotionsHasCoupons:
+    type: entity
+    table: promotions_has_coupons
+    indexes:
+        fk_promotions_has_coupons_coupons1_idx:
+            columns:
+                - coupons_id
+        fk_promotions_has_coupons_promotions1_idx:
+            columns:
+                - promotions_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        promotions:
+            targetEntity: Promotions
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                promotions_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        coupons:
+            targetEntity: Coupons
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                coupons_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

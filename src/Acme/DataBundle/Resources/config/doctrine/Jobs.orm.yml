@@ -1,0 +1,95 @@
+Acme\DataBundle\Entity\Jobs:
+    type: entity
+    table: jobs
+    repositoryClass: Acme\DataBundle\Entity\Repository\JobsRepository
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        code:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        name:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        slug:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        jobType:
+            type: string
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        careerLevel:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        education:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        category:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        requirements:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        quote:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        authorQuote:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        datePosted:
+            type: date
+            nullable: true
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    lifecycleCallbacks: {  }

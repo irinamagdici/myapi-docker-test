@@ -1,0 +1,138 @@
+Acme\DataBundle\Entity\RealEstateForm:
+    type: entity
+    table: real_estate_form
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        address:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        city:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        state:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        country:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        dateAvailable:
+            type: datetime
+            nullable: true
+            comment: ''
+        dealType:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        buildingSize:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        buildingDepth:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        salePrice:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        landSizeSqFt:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        zonedAuto:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        buildingLength:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        landSize:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        leaseRate:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        propertyTaxes:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        contactFirstName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        contactLastName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        contactAddress:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        contactEmail:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        contactPhone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        comments:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

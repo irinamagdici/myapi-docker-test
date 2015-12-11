@@ -1,0 +1,13 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>
+  Hello,<br><br>
+  You are receiving this email because you requested to receive an alert when the following Meineke Car Care Center opens: <br><br>
+    <a href="{{ storeURL }}" target="_blank">{{ storeURL }}</a> <br><br>
+  We are excited to announce that this location is open and taking appointments! <br><br> 
+  Thank you for your interest, and we look forward to seeing you soon.
+</p>
+
+{% endblock %}

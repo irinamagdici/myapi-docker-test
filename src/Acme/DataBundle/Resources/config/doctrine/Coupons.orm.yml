@@ -1,0 +1,92 @@
+Acme\DataBundle\Entity\Coupons:
+    type: entity
+    table: coupons
+    repositoryClass: Acme\DataBundle\Entity\Repository\CouponsRepository
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        image:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        barcode:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        barcodeMail:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        barcodeEmail:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        offerType:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        category:
+            type: string
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        status:
+            type: boolean
+            nullable: true
+            comment: ''
+        startDate:
+            type: date
+            nullable: true
+            comment: ''
+        endDate:
+            type: date
+            nullable: true
+            comment: ''
+        isDefault:
+            type: boolean
+            nullable: true
+            comment: ''
+        isLocked:
+            type: boolean
+            nullable: true
+            comment: ''
+        orderIdx:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    lifecycleCallbacks: {  }

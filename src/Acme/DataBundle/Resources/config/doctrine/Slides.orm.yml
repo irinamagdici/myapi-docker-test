@@ -1,0 +1,53 @@
+Acme\DataBundle\Entity\Slides:
+    type: entity
+    table: slides
+    repositoryClass: Acme\DataBundle\Entity\Repository\SlidesRepository
+    indexes:
+        fk_slides_stores1_idx:
+            columns:
+                - stores_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        bannerImage:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        title:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        htmlText:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        slideURL:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+    manyToOne:
+        stores:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

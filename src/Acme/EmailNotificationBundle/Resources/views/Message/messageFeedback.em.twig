@@ -1,0 +1,21 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>
+  Hello,<br><br>
+  Please see new Meineke Feedback - Feedback Submission contents below:
+</p>
+
+<p>
+  <strong>Center ID:</strong> {{ store }}<br>
+  <strong>Email:</strong> {{ email }}<br>
+  <strong>Name:</strong> {{ name }}<br>
+  <strong>Phone:</strong> {{ phone }}<br>
+  <strong>Rating:</strong> {{ rating }}<br>
+  <strong>Feedback:</strong> {{ feedback }}
+</p>
+
+<p>Thank you!</p>
+
+{% endblock %}

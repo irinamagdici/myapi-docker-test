@@ -1,0 +1,26 @@
+Acme\DataBundle\Entity\Sku:
+    type: entity
+    table: sku
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        skuCode:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        displayName:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

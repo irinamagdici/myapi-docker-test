@@ -1,0 +1,24 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>A New Fleet Services Form Request:</p>
+
+<p>
+  <strong>Organization Name:</strong> {{ organizationName }}<br>
+  <strong>Contact Full Name:</strong> {{ contactFullName }}<br>
+  <strong>Contact Phone:</strong> {{ contactPhone }}<br>
+  <strong>Contact Email:</strong> {{ contactEmail }}<br>
+  <strong>Address:</strong> {{ address }}<br>
+  <strong>City:</strong> {{ city }}<br>
+  <strong>State:</strong> {{ state }}<br>
+  <strong>Zip Code:</strong> {{ zipCode }}<br>
+  <strong>Total Vechicles in Fleet:</strong> {{ totalVehicles }}<br><br>
+  <strong>Average Number of Vehicles Serviced Monthly:</strong> {{ avgNumber }}<br>
+  <strong>Comments:</strong> {{ comments }}<br>
+  <strong>Do you operate on a scheduled maintenance program for each vehicle:</strong> {{ scheduleMaintenance }}<br>
+  <strong>Do you use a purchase order system:</strong> {{ purchaseOrderSystem }}<br>
+  <strong>Are you interested in centralized billing and computerized vehicle history services:</strong> {{ centralizedBilling }}
+</p>
+
+{% endblock %}

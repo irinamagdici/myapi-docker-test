@@ -1,0 +1,39 @@
+Acme\DataBundle\Entity\Store2dma:
+    type: entity
+    table: store2dma
+    uniqueConstraints:
+        storeID:
+            columns:
+                - storeID
+                - dmaID
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        storeid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: storeID
+        dmaid:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: dmaID
+        storeEmail:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+            column: store_email
+    lifecycleCallbacks: {  }

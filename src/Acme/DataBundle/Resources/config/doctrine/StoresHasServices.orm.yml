@@ -1,0 +1,56 @@
+Acme\DataBundle\Entity\StoresHasServices:
+    type: entity
+    table: stores_has_services
+    repositoryClass: Acme\DataBundle\Entity\Repository\StoresServicesRepository
+    indexes:
+        fk_stores_has_services_services1_idx:
+            columns:
+                - services_id
+        fk_stores_has_services_stores1_idx:
+            columns:
+                - stores_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        isFeatured:
+            type: boolean
+            nullable: true
+            comment: ''
+        orderFeaturedIdx:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+    manyToOne:
+        stores:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        services:
+            targetEntity: Services
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                services_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

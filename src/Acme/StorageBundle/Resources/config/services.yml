@@ -1,0 +1,7 @@
+parameters:
+#    cms_storage.example.class: Acme\StorageBundle\Example
+
+services:
+#    cms_storage.example:
+#        class: %cms_storage.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

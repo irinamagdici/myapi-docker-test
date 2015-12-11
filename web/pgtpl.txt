@@ -1,0 +1,37 @@
+Homepage
+Autosuggest City, State in search bar
+Locations > State
+Locations > State > Regions  (Metro Pages)
+Locations > State > Regions > City
+Franchise Page
+Franchise Page > Featured Service - tabs and coupons
+Franchise Page > Reviews Page
+Search & Search results page
+Metro Search page (DMA w/ assoc stores)
+Metro Store page  (linked to from Metro search page)
+Coupons Page landing (Find Coupons in your area) 
+Eblast Promo (templates)
+All Services
+Car Dictionary
+Careers > Landing
+Careers > Job Details
+Careers > Submission
+Review page (postive/negative feedback)
+Partnerships
+PR & Newsroom (Press Release, different from Blog)
+Blog > Landing
+Blog > Category
+Blog > Post Page
+Sponsorship
+Sustainability
+About
+Meineke Car Care Club
+Seasonal Car Care
+Road Assistance
+Fleet Services
+International > Canada, China, Mexico, Caribbean
+Meineke CreditCard
+Meineke CreditCard > Application
+Regional Offers 
+Featured Shops
+Other static pages (TOS, PP, Sitemap etc.)

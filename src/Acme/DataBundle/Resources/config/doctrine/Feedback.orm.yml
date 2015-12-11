@@ -1,0 +1,72 @@
+Acme\DataBundle\Entity\Feedback:
+    type: entity
+    table: feedback
+    indexes:
+        fk_feedback_stores1_idx:
+            columns:
+                - stores_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        email:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        firstName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lastName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        phone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        rating:
+            type: boolean
+            nullable: true
+            comment: ''
+        feedbackText:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        stores:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

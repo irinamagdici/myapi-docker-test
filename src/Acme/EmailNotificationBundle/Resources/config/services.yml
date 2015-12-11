@@ -1,0 +1,7 @@
+parameters:
+#    cms_email_notification.example.class: Acme\EmailNotificationBundle\Example
+
+services:
+#    cms_email_notification.example:
+#        class: %cms_email_notification.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

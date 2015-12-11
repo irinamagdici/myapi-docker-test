@@ -1,0 +1,322 @@
+Acme\DataBundle\Entity\Stores:
+    type: entity
+    table: stores
+    repositoryClass: Acme\DataBundle\Entity\Repository\StoresRepository
+    indexes:
+        fk_stores_dma_idx:
+            columns:
+                - dma_id
+        lat_idx:
+            columns:
+                - lat
+        lng_idx:
+            columns:
+                - lng
+    uniqueConstraints:
+        storeId_UNIQUE:
+            columns:
+                - storeId
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        storeId:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+        streetAddress1:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        streetAddress2:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        locationCity:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        locationState:
+            type: string
+            nullable: true
+            length: 2
+            fixed: false
+            comment: ''
+        locationPostalCode:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        locationRegion:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        locationCountry:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        locationEmail:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        locationStatus:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+        phone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        rawPhone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        semCamPhone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        rawSemCamPhone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        trackingPhone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        rawTrackingPhone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        lng:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lat:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        storeURL:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        facebookURL:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        googleplusURL:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        yelpURL:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        foursquareURL:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        primaryContact:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        hoursWeekdayOpen:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        hoursWeekdayClose:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        hoursSaturdayOpen:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        hoursSaturdayClose:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        hoursSundayOpen:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        hoursSundayClose:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        locationDirections:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        starRating:
+            type: integer
+            unsigned: true
+            nullable: true
+            comment: ''
+        openDate:
+            type: date
+            nullable: true
+            comment: ''
+        americanExpress:
+            type: boolean
+            nullable: true
+            comment: ''
+        visa:
+            type: boolean
+            nullable: true
+            comment: ''
+        aseSymbol:
+            type: boolean
+            nullable: true
+            comment: ''
+        dinersClub:
+            type: boolean
+            nullable: true
+            comment: ''
+        discover:
+            type: boolean
+            nullable: true
+            comment: ''
+        mastercard:
+            type: boolean
+            nullable: true
+            comment: ''
+        meinekeCreditCard:
+            type: boolean
+            nullable: true
+            comment: ''
+        militaryDiscount:
+            type: boolean
+            nullable: true
+            comment: ''
+        seniorDiscount:
+            type: boolean
+            nullable: true
+            comment: ''
+        timezone:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        customerBadge:
+            type: boolean
+            nullable: true
+            comment: ''
+        smallLabel:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        bannerImage:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        isFeatured:
+            type: boolean
+            nullable: true
+            comment: ''
+        orderFeaturedIdx:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+        hasFullSlate:
+            type: boolean
+            nullable: true
+            comment: ''
+        optin:
+            type: boolean
+            nullable: true
+            comment: ''
+        hasVeterans:
+            type: boolean
+            nullable: true
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        dma:
+            targetEntity: Dma
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dma_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,138 @@
+Acme\DataBundle\Entity\Services:
+    type: entity
+    table: services
+    repositoryClass: Acme\DataBundle\Entity\Repository\ServicesRepository
+    indexes:
+        fk_services_services1_idx:
+            columns:
+                - parent_id
+        title_idx:
+            columns:
+                - title
+        slug_idx:
+            columns:
+                - slug
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        slug:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        icon:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        featuredImage:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        headerText:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        headerServiceText:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        shortDescription:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        longDescription:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        longFZDescription:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        bottomText:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        isFeatured:
+            type: boolean
+            nullable: true
+            comment: ''
+        isMain:
+            type: boolean
+            nullable: true
+            comment: ''
+        isPrimary:
+            type: boolean
+            nullable: true
+            comment: ''
+        isAdditional:
+            type: boolean
+            nullable: true
+            comment: ''
+        isAmenity:
+            type: boolean
+            nullable: true
+            comment: ''
+        isFullSlate:
+            type: boolean
+            nullable: true
+            comment: ''
+        isCsv:
+            type: boolean
+            nullable: true
+            comment: ''
+        orderIdx:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        parent:
+            targetEntity: Services
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                parent_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

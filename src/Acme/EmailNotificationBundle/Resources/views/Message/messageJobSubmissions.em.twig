@@ -1,0 +1,18 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>A New Job Submission Form Request:</p>
+
+<p>
+  <strong>Location:</strong> {{ location }}<br>
+  <strong>Interested in:</strong> {{ job }}<br>
+  <strong>First Name:</strong> {{ firstName }}<br>
+  <strong>Last Name:</strong> {{ lastName }}<br>
+  <strong>Email:</strong> {{ email }}<br>
+  <strong>Phone:</strong> {{ phone }}<br>
+  <strong>Message:</strong> {{ comments }}<br>
+  <strong>Resume:</strong> <a href="{{ resume }}" target="_blank">{{ resume }}</a>
+</p>
+
+{% endblock %}

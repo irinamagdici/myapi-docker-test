@@ -1,0 +1,54 @@
+Acme\DataBundle\Entity\Dma:
+    type: entity
+    table: dma
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        state:
+            type: string
+            nullable: true
+            length: 2
+            fixed: false
+            comment: ''
+        dmaSlug:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lat:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lng:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    lifecycleCallbacks: {  }

@@ -1,0 +1,45 @@
+Acme\DataBundle\Entity\DmaHasCoupons:
+    type: entity
+    table: dma_has_coupons
+    indexes:
+        fk_dma_has_coupons_coupons1_idx:
+            columns:
+                - coupons_id
+        fk_dma_has_coupons_dma1_idx:
+            columns:
+                - dma_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        orderIdx:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+    manyToOne:
+        dma:
+            targetEntity: Dma
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dma_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        coupons:
+            targetEntity: Coupons
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                coupons_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

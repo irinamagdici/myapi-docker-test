@@ -1,0 +1,68 @@
+Acme\DataBundle\Entity\StoresTeam:
+    type: entity
+    table: stores_team
+    indexes:
+        fk_stores_team_stores1_idx:
+            columns:
+                - stores_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        firstName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lastName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        position:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        photo:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        stores:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

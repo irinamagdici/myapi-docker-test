@@ -1,0 +1,76 @@
+Acme\DataBundle\Entity\Promotions:
+    type: entity
+    table: promotions
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        slug:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        facebookTitle:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        facebookText:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        facebookImage:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        twitterText:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        emailBody:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        emailSubject:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        status:
+            type: boolean
+            nullable: true
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    lifecycleCallbacks: {  }

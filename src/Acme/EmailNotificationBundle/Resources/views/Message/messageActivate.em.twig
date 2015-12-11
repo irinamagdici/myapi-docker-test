@@ -1,0 +1,11 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+  <p>
+  	Dear {{ receiverFirstName }} {{ receiverLastName }},<br><br>
+  	You are receiving this e-mail because you signed up for a Meineke Rewards account. In order to use your account you must activate it using the following link:<br><br>
+      <a href="{{ activateUrl }}" target="_blank">{{ activateUrl }}</a>
+  </p>
+
+{% endblock %}

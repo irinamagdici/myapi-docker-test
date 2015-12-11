@@ -1,0 +1,11 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>
+  Hello,<br><br>
+  You are receiving this e-mail because you requested to receive the reward you selected:<br><br>
+    <a href="{{ imageURL }}" target="_blank">{{ imageURL }}</a>
+</p>
+
+{% endblock %}

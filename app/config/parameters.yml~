@@ -1,0 +1,74 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 52.24.27.64
+    database_port: 3306
+    database_name: mnk
+    database_user: mnk
+    database_password: 'mnkdevelop13#'
+
+    locale: en
+    secret: '6?rK^hf`682@A5^'
+
+    mailer_transport: smtp
+    mailer_host: smtp.sendgrid.net
+    mailer_port: 587
+    mailer_user: MattyMeineke
+    mailer_password: 'SendGridGuy123'
+
+    mailer_transport_sms: smtp
+    mailer_host_sms: smtp.sendgrid.net
+    mailer_port_sms: 587
+    mailer_user_sms: florin.raicu
+    mailer_password_sms: 'fdLEWR323#DSEwe'
+
+    email_notification_from_email: noreply@meineke.com
+    email_notification_from_name: Meineke
+    email_notification_to: irina@xivic.com;george.tascu@xivic.com
+    email_notification_fleet: irina@xivic.com;george.tascu@xivic.com
+    email_notification_bcc: irina@xivic.com;george.tascu@xivic.com
+    email_feedback_to: irina@xivic.com;george.tascu@xivic.com
+    email_closed_to: irina@xivic.com
+    email_cron_to: irina@xivic.com;george.tascu@xivic.com
+
+    project:
+        site_path: '/var/www/myapi/web/'
+        site_name: 'DevOps Test API'
+        upload_dir_images: 'resources/images/'
+        upload_dir_documents: 'resources/documents/'
+        resize_height: 320
+        cdn_front_resources_url: http://d2r3n4kkn82mu7.cloudfront.net/resources/
+        front_url: http://localhost/
+
+    storage:
+        amazon_aws_access_key: AKIAJBW2NOGPHEMPE4UA
+        amazon_aws_security_key: rmsndSG9vCskkDFGhaPdeqSeSL83U9pKHBALCDiy
+        amazon_s3_endpoint: s3-us-west-2.amazonaws.com
+        amazon_s3_bucket_name: meineke-rearc
+        amazon_s3_distribution_id: E1CB6ZABOQPQ83
+        imagesDirectory: resources/uploads/images/
+        couponsDirectory: resources/uploads/images/coupons/
+        videosDirectory: resources/uploads/videos/
+        documentsDirectory: resources/uploads/documents/
+        amazon_transcoder_region: us-west-2
+        amazon_transcoder_pipeline: 1399616915702-gjdga2
+        amazon_transcoder_mp4: 1399619375239-uevjjv
+        amazon_transcoder_webm: 1399619700288-p7fv0d
+
+    clutch:
+        api_url: https://api.clutch.com
+        api_port: 443
+        api_service: /merchant/
+        api_key: 4011c801-0da2-40d7-bb1d-957b1983b648
+        api_secret: H5UYV27SEBIWPEKVFP73
+        brand: MEINEKE
+        location: MEINEKEWEB
+        terminal: XIVICWEB
+    
+    fullslate:
+        fullslate_url: 'http://meineke{id}.fullslate.com/api'
+        #fullslate_url: 'http://xivictestaccount.stage.fullslate.com/api'
+        fullslate_secured_url: 'https://meineke{id}.fullslate.com/api'
+        #fullslate_secured_url: 'https://xivictestaccount.stage.fullslate.com/api'
+        fullslate_security_key: '5GYxapaNRDjKgvNjWwvUyfIZlicpVmSB9Gz0TVMAJvSB2jNp1R&'
+        #fullslate_security_key: nTUbUllXSQhamYJO52fe9FQssrYU1KhZlMz9K8VPR6ssZow945&

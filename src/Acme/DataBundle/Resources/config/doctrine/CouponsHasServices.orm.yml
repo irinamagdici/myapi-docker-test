@@ -1,0 +1,39 @@
+Acme\DataBundle\Entity\CouponsHasServices:
+    type: entity
+    table: coupons_has_services
+    indexes:
+        fk_coupons_has_services_coupons1_idx:
+            columns:
+                - coupons_id
+        fk_coupons_has_services_services1_idx:
+            columns:
+                - services_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        coupons:
+            targetEntity: Coupons
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                coupons_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        services:
+            targetEntity: Services
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                services_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,11 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>
+  Hello,<br><br>
+  You are receiving this e-mail because you requested to receive coupons from Meineke. Please go to the following URL to download your coupons PDF:<br><br>
+  <a href="{{ documentURL }}" target="_blank">{{ documentURL }}</a>
+</p>
+
+{% endblock %}

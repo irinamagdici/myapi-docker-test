@@ -1,0 +1,11 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>
+  Hello,<br><br>
+  You are receiving this e-mail because you requested to receive an alert when this store has been closed:<br><br>
+    <a href="{{ storeURL }}" target="_blank">{{ storeURL }}</a>
+</p>
+
+{% endblock %}

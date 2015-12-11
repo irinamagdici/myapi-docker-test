@@ -1,0 +1,36 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+  <p>A New Car Care Club Form Request:</p>
+
+  <h4>Personal Information:</h4>
+  <p>
+    <strong>First Name:</strong> {{ firstName }}<br>
+    <strong>Last Name:</strong> {{ lastName }}<br>
+    <strong>Email:</strong> {{ email }}<br>
+    <strong>Address 1:</strong> {{ address1 }}<br>
+    <strong>Address 2:</strong> {{ address2 }}<br>
+    <strong>City:</strong> {{ city }}<br>
+    <strong>State:</strong> {{ state }}<br>
+    <strong>Zip Code:</strong> {{ zipCode }}<br>
+    <strong>Phone:</strong> {{ phone }}
+  </p>
+
+  <h4>About Meineke:</h4>
+  <p>
+    <strong>Are you a current Meineke costumer:</strong> {{ meinekeCustomer }}<br>
+    <strong>In which state are you a most likely to visit a Meineke:</strong> {{ stateVisitMeineke }}
+  </p>
+
+  <h4>About Vehicle:</h4>
+  {% for item in vehicles %}
+  <p>
+    <strong>Vehicle Year:</strong> {{ item.vehicleYear }}<br>
+    <strong>Vehicle Make:</strong> {{ item.vehicleMake }}<br>
+    <strong>Vehicle Model:</strong> {{ item.vehicleModel }}<br>
+    <strong>Mileage:</strong> {{ item.mileAge }}
+  </p>
+  {% endfor %}
+
+{% endblock %}

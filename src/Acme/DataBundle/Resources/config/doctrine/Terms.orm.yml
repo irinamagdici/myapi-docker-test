@@ -1,0 +1,43 @@
+Acme\DataBundle\Entity\Terms:
+    type: entity
+    table: terms
+    repositoryClass: Acme\DataBundle\Entity\Repository\TermsRepository
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        slug:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        term:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    lifecycleCallbacks: {  }

@@ -1,0 +1,102 @@
+Acme\DataBundle\Entity\FleetServicesForm:
+    type: entity
+    table: fleet_services_form
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        organizationName:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        contactFullName:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        contactPhone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        contactEmail:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        address:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        city:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        state:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        zipCode:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        totalVehicles:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        avgNumber:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        comments:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        scheduleMaintenance:
+            type: boolean
+            nullable: true
+            comment: ''
+        purchaseOrderSystem:
+            type: boolean
+            nullable: true
+            comment: ''
+        centralizedBilling:
+            type: boolean
+            nullable: true
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    lifecycleCallbacks: {  }

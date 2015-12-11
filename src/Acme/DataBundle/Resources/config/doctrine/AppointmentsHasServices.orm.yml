@@ -1,0 +1,39 @@
+Acme\DataBundle\Entity\AppointmentsHasServices:
+    type: entity
+    table: appointments_has_services
+    indexes:
+        fk_appointments_has_services_services1_idx:
+            columns:
+                - services_id
+        fk_appointments_has_services_appointments1_idx:
+            columns:
+                - appointments_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        appointments:
+            targetEntity: Appointments
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                appointments_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        services:
+            targetEntity: Services
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                services_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

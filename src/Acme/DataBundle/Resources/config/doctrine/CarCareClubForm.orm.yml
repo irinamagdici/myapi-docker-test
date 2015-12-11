@@ -1,0 +1,88 @@
+Acme\DataBundle\Entity\CarCareClubForm:
+    type: entity
+    table: car_care_club_form
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        firstName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lastName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        email:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        address1:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        address2:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        city:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        state:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        zipCode:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        phone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        meinekeCustomer:
+            type: boolean
+            nullable: true
+            comment: ''
+        stateVisitMeineke:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    lifecycleCallbacks: {  }

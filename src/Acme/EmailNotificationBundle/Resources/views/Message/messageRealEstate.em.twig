@@ -1,0 +1,38 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+<p>A New Real Estate Form Request:</p>
+
+<p><strong>Location Information</strong></p>
+
+<p>
+  <strong>Address:</strong> {{ address }}<br>
+  <strong>City:</strong> {{ city }}<br>
+  <strong>State:</strong> {{ state }}<br>
+  <strong>Country:</strong> {{ country }}<br>
+  <strong>Date Available:</strong> {{ dateAvailable }}<br>
+  <strong>Deal Type:</strong> {{ dealType }}<br>
+  <strong>Building Size (Sq. Ft.):</strong> {{ buildingSize }}<br>
+  <strong>Building Depth (In Ft.):</strong> {{ buildingDepth }}<br>
+  <strong>Sale Price:</strong> {{ salePrice }}<br><br>
+  <strong>Land Size (Sq. Ft.):</strong> {{ landSizeSqFt }}<br>
+  <strong>Zoned for Auto:</strong> {{ zonedAuto }}<br>
+  <strong>Building Length (In Ft.):</strong> {{ buildingLength }}<br>
+  <strong>Land Size (In Ft.):</strong> {{ landSize }}<br>
+  <strong>Lease Rate:</strong> {{ leaseRate }}<br>
+  <strong>Property Taxes:</strong> {{ propertyTaxes }}
+</p>
+
+<p><strong>Contact Information</strong></p>
+
+<p>
+  <strong>First Name:</strong> {{ contactFirstName }}<br>
+  <strong>Last Name:</strong> {{ contactLastName }}<br>
+  <strong>Address:</strong> {{ contactAddress }}<br>
+  <strong>Email:</strong> {{ contactEmail }}<br>
+  <strong>Phone:</strong> {{ contactPhone }}<br>
+  <strong>Comments:</strong> {{ comments }}
+</p>
+
+{% endblock %}

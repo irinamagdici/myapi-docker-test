@@ -1,0 +1,138 @@
+Acme\DataBundle\Entity\Appointments:
+    type: entity
+    table: appointments
+    repositoryClass: Acme\DataBundle\Entity\Repository\AppointmentsRepository
+    indexes:
+        fk_appointments_users1_idx:
+            columns:
+                - users_id
+        fk_appointments_stores1_idx:
+            columns:
+                - stores_id
+        fk_appointments_vehicles1_idx:
+            columns:
+                - vehicles_id
+    uniqueConstraints:
+        full_slate_id_UNIQUE:
+            columns:
+                - full_slate_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fullSlateId:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+            column: full_slate_id
+        firstName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lastName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        email:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        vehicleMake:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        vehicleModel:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        vehicleYear:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        appointmentDate:
+            type: datetime
+            nullable: true
+            comment: ''
+        comments:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        vehicleDropoff:
+            type: boolean
+            nullable: true
+            comment: ''
+        waitForCar:
+            type: boolean
+            nullable: true
+            comment: ''
+        textReminderSMS:
+            type: boolean
+            nullable: true
+            comment: ''
+        phone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        users:
+            targetEntity: Users
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                users_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        stores:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        vehicles:
+            targetEntity: Vehicles
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                vehicles_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

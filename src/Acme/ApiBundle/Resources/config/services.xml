@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="emailNotificationBundle.email.class">Acme\EmailNotificationBundle\Controller\EmailService</parameter>
+        <parameter key="storageBundle.image.class">Acme\StorageBundle\Controller\ImageService</parameter>
+        <parameter key="storageBundle.video.class">Acme\StorageBundle\Controller\VideoService</parameter>
+        <parameter key="storageBundle.document.class">Acme\StorageBundle\Controller\DocumentService</parameter>
+        <parameter key="storageBundle.export.class">Acme\StorageBundle\Controller\ExportService</parameter>
+        <parameter key="cacheManagementBundle.redis.class">Acme\CacheManagementBundle\Controller\CacheService</parameter>
+    </parameters>
+
+    <services>
+        <service id="emailNotificationBundle.email" class="%emailNotificationBundle.email.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="templating" />
+        </service>
+        <service id="storageBundle.image" class="%storageBundle.image.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="templating" />
+        </service>
+        <service id="storageBundle.video" class="%storageBundle.video.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="templating" />
+        </service>
+        <service id="storageBundle.document" class="%storageBundle.document.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="templating" />
+        </service>
+        <service id="storageBundle.export" class="%storageBundle.export.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="templating" />
+        </service>
+        <service id="cacheManagementBundle.redis" class="%cacheManagementBundle.redis.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="templating" />
+        </service>
+    </services>
+
+</container>

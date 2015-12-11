@@ -1,0 +1,46 @@
+Acme\DataBundle\Entity\Rewards:
+    type: entity
+    table: rewards
+    repositoryClass: Acme\DataBundle\Entity\Repository\RewardsRepository
+    indexes:
+        fk_rewards_services1_idx:
+            columns:
+                - services_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        points:
+            type: integer
+            nullable: true
+            unsigned: true
+            comment: ''
+        image:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+    manyToOne:
+        services:
+            targetEntity: Services
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                services_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

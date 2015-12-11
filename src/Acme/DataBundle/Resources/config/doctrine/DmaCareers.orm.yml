@@ -1,0 +1,33 @@
+Acme\DataBundle\Entity\DmaCareers:
+    type: entity
+    table: dma_careers
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        dma:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        state:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        dmaId:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+            column: dma_id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,39 @@
+Acme\DataBundle\Entity\StoresHasJobs:
+    type: entity
+    table: stores_has_jobs
+    indexes:
+        fk_stores_has_jobs_jobs1_idx:
+            columns:
+                - jobs_id
+        fk_stores_has_jobs_stores1_idx:
+            columns:
+                - stores_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        stores:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        jobs:
+            targetEntity: Jobs
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                jobs_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

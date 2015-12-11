@@ -1,0 +1,51 @@
+stores_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\StoresController
+
+slides_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\SlidesController
+
+terms_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\TermsController
+
+cache_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\CacheController
+
+full_slate_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\FullSlateController
+
+services_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\ServicesController
+
+testimonials_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\TestimonialsController
+
+jobs_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\JobsController
+
+security_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\SecurityController
+
+coupons_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\CouponsController
+
+upload_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\UploadController
+
+forms_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\FormsController
+
+cms_coupons_api:
+    type: rest
+    resource: Acme\ApiBundle\Controller\CMSCouponsController

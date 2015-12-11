@@ -1,0 +1,80 @@
+Acme\DataBundle\Entity\JobSubmissions:
+    type: entity
+    table: job_submissions
+    indexes:
+        fk_job_submissions_stores_has_jobs1_idx:
+            columns:
+                - stores_has_jobs_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        location:
+            type: string
+            nullable: true
+            length: 100
+            fixed: false
+            comment: ''
+        firstName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lastName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        resumePdf:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        body:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        email:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        phone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        storesHasJobs:
+            targetEntity: StoresHasJobs
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stores_has_jobs_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

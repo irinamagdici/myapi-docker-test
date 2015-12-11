@@ -1,0 +1,16 @@
+{% extends "AcmeEmailNotificationBundle::master.em.twig" %}
+
+{% block content %}
+
+  <p>
+  	Dear {{ receiverFirstName }} {{ receiverLastName }},<br><br>
+  	Congratulations! You have successfully activated your Meineke Rewards account. Now you can login and enjoy the full experience of the portal.<br>
+    Your login email:<br><br>
+    =======================<br>
+    {{ receiverUsername }}<br>
+    =======================<br><br>
+
+    For security reasons your password is not specified in this email.
+  </p>
+
+{% endblock %}

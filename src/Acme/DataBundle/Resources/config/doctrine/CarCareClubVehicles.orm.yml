@@ -1,0 +1,52 @@
+Acme\DataBundle\Entity\CarCareClubVehicles:
+    type: entity
+    table: car_care_club_vehicles
+    indexes:
+        fk_car_care_club_vehicles_car_care_club_form1_idx:
+            columns:
+                - car_care_club_form_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        vehicleYear:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        vehicleMake:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        vehicleModel:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        vehicleMileage:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+    manyToOne:
+        carCareClubForm:
+            targetEntity: CarCareClubForm
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                car_care_club_form_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

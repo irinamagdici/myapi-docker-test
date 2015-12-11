@@ -1,0 +1,120 @@
+Acme\DataBundle\Entity\Users:
+    type: entity
+    table: users
+    indexes:
+        fk_users_stores1_idx:
+            columns:
+                - my_store_id
+        fk_users_stores2_idx:
+            columns:
+                - last_visited_store_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        firstName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        lastName:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        phone:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        facebookId:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        address:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        city:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        state:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        country:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        cardNumber:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        customCardNumber:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        loyaltyPointsBalance:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+        newsletter:
+            type: boolean
+            nullable: true
+            comment: ''
+        dateUpdated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_updated
+        dateCreated:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: date_created
+    manyToOne:
+        myStore:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                my_store_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        lastVisitedStore:
+            targetEntity: Stores
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                last_visited_store_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
